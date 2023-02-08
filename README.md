@@ -4,6 +4,10 @@
 
 SIGHT (Special Interest Group on Humanitarian Technology), es la organización de voluntarios profesionales y estudiantiles, más grande del mundo, dedicada a promover el uso de la tecnología e ingeniería hacia el Desarrollo Sostenible de nuestro planeta, es decir dirigir la innovación tecnológica hacia el beneficio de la humanidad.
 
+## Proyecto WEB
+
+Desarrollo de una aplicación web para la publicación y administración de proyectos y eventos, con el fin de promover la publicación y difusión de ideas innovadoras para el apoyo social.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
