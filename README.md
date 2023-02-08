@@ -1,5 +1,9 @@
 <p align="center"><a href="https://r9.ieee.org/ecuador/sight/#:~:text=IEEE%20SIGHT%20(Special%20Interest%20Group,innovaci%C3%B3n%20tecnol%C3%B3gica%20hacia%20el%20beneficio" target="_blank"><img src="https://r9.ieee.org/ecuador/wp-content/uploads/sites/110/2020/02/Logo-SIGHT-Ecuador.png" width="400" alt="IEEE SIGHT Logo"></a></p>
 
+## Sobre IEEE Sight
+
+SIGHT (Special Interest Group on Humanitarian Technology), es la organización de voluntarios profesionales y estudiantiles, más grande del mundo, dedicada a promover el uso de la tecnología e ingeniería hacia el Desarrollo Sostenible de nuestro planeta, es decir dirigir la innovación tecnológica hacia el beneficio de la humanidad.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
