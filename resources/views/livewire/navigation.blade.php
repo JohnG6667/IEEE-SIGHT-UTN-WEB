@@ -14,15 +14,15 @@
                     data-target="#mega-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand mr-auto m-sm-auto" href="index.html"> <img src="img/logo.svg" alt="roxine">
+                <a class="navbar-brand mr-auto m-sm-auto" href="/"> <img src="img/logo.svg" alt="roxine">
                     <img src="img/logo-dark.svg" alt="roxine"> </a>
                 <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home"> Home
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home"> Home
                             </a>
                             <ul class="dropdown-menu no-border-radius">
-                                <li><a href="index.html"> Creative Agency </a></li>
+                                <li><a href="/"> Creative Agency </a></li>
                                 <li><a href="design-studio.html"> Design Studio </a></li>
                                 <li><a href="digital-agency.html"> Digital Agency </a></li>
                                 <li><a href="construction.html"> Construction </a></li>
@@ -30,7 +30,7 @@
                             </ul>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home">
                                 Features </a>
                             <ul class="dropdown-menu  no-border-radius">
                                 <li class="dropdown dropdown-right dropdown-parent">
@@ -145,7 +145,7 @@
                             </ul>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home">
                                 Portfolio </a>
                             <ul class="dropdown-menu no-border-radius">
                                 <li class="dropdown dropdown-left dropdown-parent">
@@ -288,7 +288,7 @@
                             <a href="team.html"> Team </a>
                         </li>
                         <li class="dropdown right-dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home">
                                 Blog </a>
                             <ul class="dropdown-menu no-border-radius">
                                 <li><a href="blog-one-col.html"> Blog One Column </a></li>
