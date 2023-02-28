@@ -22,7 +22,6 @@ class ObjetiveFactory extends Factory
         return [
             'description' => $this->faker->text(250),
             'project_id' => Project::all()->random()->id,
-
         ];
     }
 }
