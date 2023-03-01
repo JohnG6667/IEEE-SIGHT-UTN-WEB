@@ -31,7 +31,7 @@
  *
  * bootstrap-slider is released under the MIT License
  * Copyright (c) 2017 Kyle Kemp, Rohit Kalkur, and contributors
- * 
+ *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -40,10 +40,10 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
  * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -576,7 +576,7 @@ img {
   height: auto; }
 
 a {
-  color: #5645ff;
+  color: rgba(0, 123, 255, 1);
   text-decoration: none;
   outline: none;
   -webkit-transition: all linear 0.2s;
@@ -585,7 +585,7 @@ a {
   a:hover, a:focus {
     text-decoration: none;
     outline: none;
-    color: #2812ff; }
+    color: #d4611c; }
 
 /* typography */
 body {
@@ -2742,7 +2742,7 @@ em.state-invalid {
       color: #646464;
       font-weight: 500; }
       .main-header .top-header.mega-menus .i-list.i-list-i-block.i-list-i-block-sm > li a:hover {
-        color: #5645ff; }
+        color: rgba(0, 123, 255, 1); }
       @media only screen and (min-width: 991px) {
         .main-header .top-header.mega-menus .i-list.i-list-i-block.i-list-i-block-sm > li a span {
           margin-right: 0.625rem;
@@ -2899,7 +2899,7 @@ em.state-invalid {
     .main-header .i-list.i-list-i-block.i-list-i-block-sm li a {
       padding: 0.5rem 0.625rem; }
       .main-header .i-list.i-list-i-block.i-list-i-block-sm li a:hover {
-        color: #5645ff; }
+        color: rgba(0, 123, 255, 1); }
     @media only screen and (min-width: 1230px) {
       > .main-header .i-list.i-list-i-block.i-list-i-block-sm li:first-child a {
         padding-left: 0; } }
@@ -3172,7 +3172,7 @@ em.state-invalid {
   .main-header.header-white .i-list.i-list-i-block.i-list-i-block-sm li a:hover {
     color: #a7a7a7; }
   .main-header.header-white .mini-nav:hover > a {
-    color: #5645ff; }
+    color: rgba(0, 123, 255, 1); }
   .main-header.header-white .mini-nav .dropdown-menu.pad-small {
     background: #fff;
     -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 4px 10px 0 rgba(0, 0, 0, 0.1);
@@ -3277,12 +3277,12 @@ em.state-invalid {
       min-width: 100%;
       font-size: 0.875rem;
       color: #fff;
-      background: #5645ff;
-      border-color: #5645ff; }
+      background: rgba(0, 123, 255, 1);
+      border-color: rgba(0, 123, 255, 1); }
       .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn:hover, .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn:focus {
         outline: none;
-        background: #2812ff;
-        border-color: #2812ff;
+        background: #d4611c;
+        border-color: #d4611c;
         -webkit-box-shadow: none;
                 box-shadow: none;
         color: #fff; }
@@ -3323,10 +3323,10 @@ em.state-invalid {
 
 .header-white .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn {
   color: #fff;
-  border-color: #5645ff; }
+  border-color: rgba(0, 123, 255, 1); }
   .header-white .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn:hover, .header-white .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn:focus {
-    background: #2812ff;
-    border-color: #2812ff; }
+    background: #d4611c;
+    border-color: #d4611c; }
 
 /***********************  header logo center ***********************/
 .header-logo-center .mega-menus .mega-menu-multiple .cart-list {
@@ -3426,7 +3426,7 @@ em.state-invalid {
     .visual-title {
       font-size: 3.75rem; } }
   .visual-title span {
-    color: #5645ff; }
+    color: rgba(0, 123, 255, 1); }
   @media only screen and (min-width: 767px) {
     .visual-title {
       margin-bottom: 1.875rem; } }
@@ -3658,7 +3658,7 @@ em.state-invalid {
   padding: 0.9375rem;
   letter-spacing: 0.1429rem;
   text-transform: uppercase;
-  border: 0.1429rem solid #5645ff;
+  border: 0.1429rem solid rgba(0, 123, 255, 1);
   color: #fff;
   min-width: 10rem;
   outline: none;
@@ -3692,12 +3692,12 @@ em.state-invalid {
     -webkit-box-shadow: none;
             box-shadow: none; }
   .btn.btn-primary {
-    background: #5645ff;
-    border-color: #5645ff;
+    background: rgba(0, 123, 255, 1);
+    border-color: rgba(0, 123, 255, 1);
     color: #fff; }
     .btn.btn-primary:hover {
-      background: #2812ff;
-      border-color: #2812ff; }
+      background: #d4611c;
+      border-color: #d4611c; }
   .btn.btn-secondary {
     background: #ff6138;
     color: #fff;
@@ -3754,10 +3754,10 @@ em.state-invalid {
               transform: translate(0, -50%);
       font-size: 1.857rem; }
   .btn.btn-trans-primary {
-    border: 0.1429rem solid #5645ff;
+    border: 0.1429rem solid rgba(0, 123, 255, 1);
     color: #55565b; }
     .btn.btn-trans-primary:hover {
-      background: #5645ff;
+      background: rgba(0, 123, 255, 1);
       color: #fff; }
   .btn.btn-trans-secondary {
     border: 0.1429rem solid #ff6138;
@@ -4070,9 +4070,9 @@ em.state-invalid {
   line-height: 2.25rem; }
 
 .content-links ul li a {
-  color: #5645ff; }
+  color: rgba(0, 123, 255, 1); }
   .content-links ul li a:hover, .content-links ul li a:focus {
-    color: #2812ff; }
+    color: #d4611c; }
 
 .container-md {
   max-width: 990px;
@@ -4470,9 +4470,9 @@ main.no-banner {
 .circular-icon {
   width: 1.875rem;
   height: 1.875rem;
-  color: #5645ff;
+  color: rgba(0, 123, 255, 1);
   border-radius: 50%;
-  border: 1px solid #5645ff;
+  border: 1px solid rgba(0, 123, 255, 1);
   margin: 0 auto;
   font-size: 0.8571rem;
   line-height: 2rem; }
@@ -4606,7 +4606,7 @@ pre {
   color: #55565b;
   font-weight: 700; }
   .heading h2 span {
-    color: #5645ff; }
+    color: rgba(0, 123, 255, 1); }
 
 /*------------------------------------------------------------------
 9. Parallax / .parallax
@@ -5448,7 +5448,7 @@ a.full-width-icon {
     -o-transition: all linear .2s;
     transition: all linear .2s; }
   .intro-box:hover .content-title {
-    color: #5645ff; }
+    color: rgba(0, 123, 255, 1); }
   .intro-box:hover .intro-img {
     -webkit-transform: translate(0, -0.7143rem);
          -o-transform: translate(0, -0.7143rem);
@@ -5659,9 +5659,9 @@ a.full-width-icon {
   .footer-v3 .bg-white .widget-block h4 {
     color: #55565b; }
   .footer-v3 .bg-white .widget-block .post-block .post-holder:hover h6 a {
-    color: #5645ff; }
+    color: rgba(0, 123, 255, 1); }
   .footer-v3 .bg-white .footer-nav ul li a:hover {
-    color: #5645ff; }
+    color: rgba(0, 123, 255, 1); }
 
 /*------------------------------------------------------------------
 20. Utilities
@@ -5759,7 +5759,7 @@ a.full-width-icon {
   background: #2d2d2d; }
 
 .bg-primary {
-  background-color: #5645ff !important; }
+  background-color: rgba(0, 123, 255, 1) !important; }
 
 .bg-secondary {
   background-color: #ff6138 !important; }
@@ -5783,7 +5783,7 @@ a.full-width-icon {
   color: #000 !important; }
 
 .text-primary {
-  color: #5645ff !important; }
+  color: rgba(0, 123, 255, 1) !important; }
 
 .text-secondary {
   color: #ff6138 !important; }

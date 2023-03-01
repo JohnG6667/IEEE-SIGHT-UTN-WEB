@@ -19,11 +19,11 @@
                 <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home"> Home
+                            <a class="dropdown-toggle" href="{{ route('index.index') }}" > Home
                             </a>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home">
+                            <a class="dropdown-toggle" href="{{ route('index.about') }}">
                                 Sobre Nosotros </a>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">

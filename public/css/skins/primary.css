@@ -53,7 +53,7 @@ a,
 .footer-v3 .bg-white .footer-nav ul li a:hover,
 .text-primary
 {
-    color: #5645ff;
+    color: rgba(0, 123, 255, 1);
 }
 
 .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn,
@@ -132,7 +132,7 @@ a,
 .tag-block ul li a:hover,
 .tparrows
 {
-    background: #5645ff;
+    background: rgba(0, 123, 255, 1);
 }
 
 .coffee_cup:before,
@@ -153,7 +153,7 @@ a,
 .select-picker-block .dropdown-menu > .active > a:hover,
 .bg-primary
 {
-    background-color: #5645ff;
+    background-color: rgba(0, 123, 255, 1);
 }
 
 .coffee_cup,
@@ -178,20 +178,20 @@ a,
 .pagination-block .pagination > .active > span:hover,
 .pagination-block .pagination.solid-nav > li:hover
 {
-    border-color: #5645ff;
+    border-color: rgba(0, 123, 255, 1);
 }
 
 .picture-item .link-box
 {
-    border-right-color: #5645ff;
+    border-right-color: rgba(0, 123, 255, 1);
 }
 
 .picture-item .link-box a:first-child
 {
-    border-bottom-color: #5645ff;
+    border-bottom-color: rgba(0, 123, 255, 1);
 }
 
 .coffee_cup:before
 {
-    box-shadow: 5px 0 0 0 #5645ff, 5px -5px 0 0 #5645ff, 10px 0 0 0 #5645ff;
+    box-shadow: 5px 0 0 0 rgba(0, 123, 255, 1), 5px -5px 0 0 rgba(0, 123, 255, 1), 10px 0 0 0 rgba(0, 123, 255, 1);
 }

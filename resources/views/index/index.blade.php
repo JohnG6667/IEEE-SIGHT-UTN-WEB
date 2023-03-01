@@ -79,7 +79,6 @@
                             data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-164","delay":""}]'
                             data-responsive_offset="on" data-paddingtop="[0,0,0,0]" data-paddingright="[25,25,25,25]"
                             data-paddingbottom="[0,0,0,0]" data-paddingleft="[25,25,25,25]">
-                            <a class="btn btn-primary has-radius-small" href="#">EXPLORE WORK</a>
                         </div>
                     </li>
                 </ul>
@@ -196,117 +195,164 @@
                 </div>
             </div>
         </section>
-        <section class="content-block portfolio-block" id="container">
-            <div class="bottom-space text-center text-uppercase">
-                <h2>The Work</h2>
-            </div>
-            <ul class="filter-nav text-center button-group filter-button-group">
-                <li>
-                    <button data-filter="*">ALL</button>
-                </li>
-                <li>
-                    <button data-filter=".ui">UI/UX DESIGN</button>
-                </li>
-                <li>
-                    <button data-filter=".programming">PROGRAMMING</button>
-                </li>
-                <li>
-                    <button data-filter=".photography">PHOTOGRAPHY</button>
-                </li>
-                <li>
-                    <button data-filter=".ecommerce">ECOMMERCE</button>
-                </li>
-            </ul>
-            <div class="row grid">
-                <div class="gallery-item col-lg-4 col-md-6 ui photography">
-                    <figure class="picture-item img-block shine-effect image-zoom port-v2">
-                        <img src="img/img-37.jpg" alt="images description">
-                        <figcaption>
-                            <div class="link-box">
-                                <a href="#">
-                                    <span class="icon-heart"><span class="sr-only">&amp;</span></span>
-                                </a>
-                                <a href="#">
-                                    <span class="icon-link"><span class="sr-only">&amp;</span></span>
-                                </a>
+        <section class="content-block">
+            <div class="container">
+                <div class="row multiple-row v-align-row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-wrap">
+                            <div class="block-heading">
+                                <h3>RECENTLY FROM</h3>
+                                <h2>THE JOURNAL</h2>
+                                <span class="block-sub-heading">Blogging like no tomorrow.</span>
+                                <div class="divider"><img src="img/divider.png" alt="images description"></div>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="gallery-item col-lg-4 col-md-6 photography programming">
-                    <figure class="picture-item img-block shine-effect image-zoom port-v2">
-                        <img src="img/img-32.jpg" alt="images description">
-                        <figcaption>
-                            <div class="link-box">
-                                <a href="#">
-                                    <span class="icon-heart"><span class="sr-only">&amp;</span></span>
-                                </a>
-                                <a href="#">
-                                    <span class="icon-link"><span class="sr-only">&amp;</span></span>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-wrap">
+                            <div class="post-grid">
+                                <div class="img-block">
+                                    <img src="img/img-16.jpg" alt="images">
+                                </div>
+                                <div class="post-text-block bg-gray-light">
+                                    <strong class="content-title mb-0">Heading South</strong>
+                                    <span class="content-sub-title">Where’s Responsive Design?</span>
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
+                                    <div class="post-meta clearfix">
+                                        <div class="post-link-holder">
+                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
+                                                        class="sr-only">&nbsp;</span></span></a>
+                                        </div>
+                                        <div class="post-social text-right">
+                                            <ul class="social-network social-small">
+                                                <li><a href="#"><span class="waituk-icon-facebook"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                                <li><a href="#"><span class="waituk-icon-twitter"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="gallery-item col-lg-4 col-md-6 ui photography">
-                    <figure class="picture-item img-block shine-effect image-zoom port-v2">
-                        <img src="img/img-33.jpg" alt="images description">
-                        <figcaption>
-                            <div class="link-box">
-                                <a href="#">
-                                    <span class="icon-heart"><span class="sr-only">&amp;</span></span>
-                                </a>
-                                <a href="#">
-                                    <span class="icon-link"><span class="sr-only">&amp;</span></span>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-wrap">
+                            <div class="post-grid">
+                                <div class="img-block">
+                                    <img src="img/img-17.jpg" alt="images">
+                                </div>
+                                <div class="post-text-block bg-gray-light">
+                                    <strong class="content-title mb-0">Product Design</strong>
+                                    <span class="content-sub-title">Thechnology and Trends</span>
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
+                                    <div class="post-meta clearfix">
+                                        <div class="post-link-holder">
+                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
+                                                        class="sr-only">&nbsp;</span></span></a>
+                                        </div>
+                                        <div class="post-social text-right">
+                                            <ul class="social-network social-small">
+                                                <li><a href="#"><span class="waituk-icon-facebook"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                                <li><a href="#"><span class="waituk-icon-twitter"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="gallery-item col-lg-4 col-md-6 ecommerce programming">
-                    <figure class="picture-item img-block shine-effect image-zoom port-v2">
-                        <img src="img/img-34.jpg" alt="images description">
-                        <figcaption>
-                            <div class="link-box">
-                                <a href="#">
-                                    <span class="icon-heart"><span class="sr-only">&amp;</span></span>
-                                </a>
-                                <a href="#">
-                                    <span class="icon-link"><span class="sr-only">&amp;</span></span>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-wrap">
+                            <div class="post-grid">
+                                <div class="img-block">
+                                    <img src="img/img-18.jpg" alt="images">
+                                </div>
+                                <div class="post-text-block bg-gray-light">
+                                    <strong class="content-title mb-0">Working Remotely</strong>
+                                    <span class="content-sub-title">Home office working for you.</span>
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
+                                    <div class="post-meta clearfix">
+                                        <div class="post-link-holder">
+                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
+                                                        class="sr-only">&nbsp;</span></span></a>
+                                        </div>
+                                        <div class="post-social text-right">
+                                            <ul class="social-network social-small">
+                                                <li><a href="#"><span class="waituk-icon-facebook"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                                <li><a href="#"><span class="waituk-icon-twitter"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="gallery-item col-lg-4 col-md-6 programming ecommerce">
-                    <figure class="picture-item img-block shine-effect image-zoom port-v2">
-                        <img src="img/img-35.jpg" alt="images description">
-                        <figcaption>
-                            <div class="link-box">
-                                <a href="#">
-                                    <span class="icon-heart"><span class="sr-only">&amp;</span></span>
-                                </a>
-                                <a href="#">
-                                    <span class="icon-link"><span class="sr-only">&amp;</span></span>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-wrap">
+                            <div class="post-grid">
+                                <div class="img-block">
+                                    <img src="img/img-08.jpg" alt="images">
+                                </div>
+                                <div class="post-text-block bg-gray-light">
+                                    <strong class="content-title mb-0">Leaving With A Note</strong>
+                                    <span class="content-sub-title">If you want to get back again.</span>
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
+                                    <div class="post-meta clearfix">
+                                        <div class="post-link-holder">
+                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
+                                                        class="sr-only">&nbsp;</span></span></a>
+                                        </div>
+                                        <div class="post-social text-right">
+                                            <ul class="social-network social-small">
+                                                <li><a href="#"><span class="waituk-icon-facebook"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                                <li><a href="#"><span class="waituk-icon-twitter"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="gallery-item col-lg-4 col-md-6 ecommerce ui">
-                    <figure class="picture-item img-block shine-effect image-zoom port-v2">
-                        <img src="img/img-36.jpg" alt="images description">
-                        <figcaption>
-                            <div class="link-box">
-                                <a href="#">
-                                    <span class="icon-heart"><span class="sr-only">&amp;</span></span>
-                                </a>
-                                <a href="#">
-                                    <span class="icon-link"><span class="sr-only">&amp;</span></span>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="col-wrap">
+                            <div class="post-grid">
+                                <div class="img-block">
+                                    <img src="img/img-07.jpg" alt="images">
+                                </div>
+                                <div class="post-text-block bg-gray-light">
+                                    <strong class="content-title mb-0">Break Timings</strong>
+                                    <span class="content-sub-title">Spending them wisely.</span>
+                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
+                                    <div class="post-meta clearfix">
+                                        <div class="post-link-holder">
+                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
+                                                        class="sr-only">&nbsp;</span></span></a>
+                                        </div>
+                                        <div class="post-social text-right">
+                                            <ul class="social-network social-small">
+                                                <li><a href="#"><span class="waituk-icon-facebook"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                                <li><a href="#"><span class="waituk-icon-twitter"><span
+                                                                class="sr-only">&nbsp;</span></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </figcaption>
-                    </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

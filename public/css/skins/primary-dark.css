@@ -4,7 +4,7 @@ a:focus,
 .content-links ul li a:focus,
 .slider-title span
 {
-    color: #2812ff;
+    color: #d4611c;
 }
 
 .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn:hover,
@@ -16,7 +16,7 @@ a:focus,
 .select-picker-block .btn.btn-primary:hover,
 .tparrows:hover
 {
-    background: #2812ff;
+    background: #d4611c;
 }
 
 .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu .btn:hover,
@@ -26,5 +26,5 @@ a:focus,
 .btn.btn-primary:hover,
 .btn-alternate.btn.btn-primary:hover
 {
-    border-color: #2812ff;
+    border-color: #d4611c;
 }
