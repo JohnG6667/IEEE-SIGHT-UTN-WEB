@@ -16,7 +16,7 @@ $(document).ready(function() {
             .remove();
     });
 
-    // scroll to top  
+    // scroll to top
     $win.scroll(function() {
         if ($(this).scrollTop() > 1000) {
             $('#scroll-to-top').fadeIn();
@@ -60,7 +60,11 @@ $(document).ready(function() {
         margin: 30,
         responsiveClass: true,
         items: 1,
-        nav: false,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 4000,
+        smartSpeed: 450,
+        nav: true,
         navText: ['<span class="icon-angle-left"></span>', '<span class="icon-angle-right"></span>'],
         responsive: {
             767: {
@@ -69,8 +73,6 @@ $(document).ready(function() {
             },
             991: {
                 items: 3,
-                nav: true,
-                loop: false,
             }
         }
     });
@@ -122,6 +124,10 @@ $(document).ready(function() {
         margin: 30,
         responsiveClass: true,
         items: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        autoplayTimeout: 4000,
+        smartSpeed: 450,
         nav: false,
         center: true,
         animateOut: 'slideOutDown',
@@ -249,30 +255,30 @@ $(document).ready(function() {
         }
     });
 
-    // Rating plugin setup 
+    // Rating plugin setup
     $(function() {
 
         $("#rateYo").rateYo({
             rating: 3.6
         });
-        // Multi color Rating plugin setup 
+        // Multi color Rating plugin setup
         $("#rateYo-multi").rateYo({
 
             rating: 1.6,
             spacing: "5px",
             multiColor: {}
         });
-        // More Numbers Rating plugin setup  
+        // More Numbers Rating plugin setup
         $("#rateYo-more").rateYo({
             numStars: 10
         });
-        // Single Rating plugin setup  
+        // Single Rating plugin setup
         $("#rateYo-single").rateYo({
             maxValue: 1,
             numStars: 1,
             starWidth: "40px"
         });
-        // small Rating plugin setup 
+        // small Rating plugin setup
         $("#rateYo-small, #rateYo-small1, #rateYo-small2").rateYo({
             rating: 3.5,
             spacing: "2px",
@@ -280,7 +286,7 @@ $(document).ready(function() {
         });
     });
 
-    // date time picker plugin setup  
+    // date time picker plugin setup
     $(function() {
         $('.datepicker-text-input').datepicker();
         $('.input-daterange').datepicker();
@@ -290,7 +296,7 @@ $(document).ready(function() {
 
     });
 
-    // Progressbar animation  
+    // Progressbar animation
     $(function() {
         $('.progress .progress-bar').css("width",
             function() {
@@ -298,7 +304,7 @@ $(document).ready(function() {
             }
         )
     });
-    // Progressbar animation  
+    // Progressbar animation
     $(function() {
         // With JQuery
         $('#ex1, #ex2').slider({
@@ -322,7 +328,7 @@ $(document).ready(function() {
 
     });
 
-    // Range Slider  
+    // Range Slider
     $(function() {
         $('#ex1, #ex2').slider({
             formatter: function(value) {
@@ -345,7 +351,7 @@ $(document).ready(function() {
 
     });
 
-    // select picker  
+    // select picker
     $(function() {
         $('.selectpicker').selectpicker();
 

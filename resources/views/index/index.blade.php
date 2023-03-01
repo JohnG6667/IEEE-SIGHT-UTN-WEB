@@ -36,7 +36,7 @@
                             data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000"
                             data-splitin="none" data-splitout="none" data-responsive_offset="on"
                             data-paddingright="[25,25,25,25]" data-paddingleft="[25,25,25,25]">
-                            GRAPHICS. WEB. DIGITAL.
+                            Special Interest Group on Humanitarian Technology
                         </div>
                         <div class="slider-main-title text-white tp-caption tp-resizeme rs-parallaxlevel-1"
                             data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
@@ -50,7 +50,7 @@
                             data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000"
                             data-splitin="none" data-splitout="none" data-responsive_offset="on"
                             data-paddingright="[25,25,25,25]" data-paddingleft="[25,25,25,25]">
-                            START-UP
+                            IEEE SIGHT
                         </div>
                         <div class="slider-text text-white tp-caption tp-resizeme rs-parallaxlevel-2"
                             data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
@@ -64,8 +64,8 @@
                             data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000"
                             data-splitin="none" data-splitout="none" data-responsive_offset="on"
                             data-paddingright="[25,25,25,25]" data-paddingleft="[25,25,25,25]">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim.
+                            IEEE SIGHT es una red global de grupos que consta de miembros y voluntarios del IEEE
+                            que identifican y abordan problemas mediante la aplicación de sus habilidades técnicas y la asociación con sus comunidades locales.
                         </div>
                         <div class="tp-caption rev-btn  rs-parallaxlevel-10" id="slide-163-layer-1"
                             data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
@@ -201,158 +201,54 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="col-wrap">
                             <div class="block-heading">
-                                <h3>RECENTLY FROM</h3>
-                                <h2>THE JOURNAL</h2>
-                                <span class="block-sub-heading">Blogging like no tomorrow.</span>
+                                <h3>RECIENTES</h3>
+                                <h2>EVENTOS Y ACTIVIDADES</h2>
                                 <div class="divider"><img src="img/divider.png" alt="images description"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="col-wrap">
-                            <div class="post-grid">
-                                <div class="img-block">
-                                    <img src="img/img-16.jpg" alt="images">
-                                </div>
-                                <div class="post-text-block bg-gray-light">
-                                    <strong class="content-title mb-0">Heading South</strong>
-                                    <span class="content-sub-title">Where’s Responsive Design?</span>
-                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
-                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
-                                    <div class="post-meta clearfix">
-                                        <div class="post-link-holder">
-                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
-                                                        class="sr-only">&nbsp;</span></span></a>
+                    @if ($events->count())
+                        @foreach ($events as $event)
+                            <div class="col-md-6 col-lg-4">
+                                <div class="col-wrap">
+                                    <div class="post-grid">
+                                        <div class="img-block">
+                                            <img @if ($event->image) src="{{ Storage::url($event->image->url) }}"
+                                            @else
+                                            src="img/img-16.jpg" @endif
+                                                alt="images">
                                         </div>
-                                        <div class="post-social text-right">
-                                            <ul class="social-network social-small">
-                                                <li><a href="#"><span class="waituk-icon-facebook"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                                <li><a href="#"><span class="waituk-icon-twitter"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="col-wrap">
-                            <div class="post-grid">
-                                <div class="img-block">
-                                    <img src="img/img-17.jpg" alt="images">
-                                </div>
-                                <div class="post-text-block bg-gray-light">
-                                    <strong class="content-title mb-0">Product Design</strong>
-                                    <span class="content-sub-title">Thechnology and Trends</span>
-                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
-                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
-                                    <div class="post-meta clearfix">
-                                        <div class="post-link-holder">
-                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
-                                                        class="sr-only">&nbsp;</span></span></a>
-                                        </div>
-                                        <div class="post-social text-right">
-                                            <ul class="social-network social-small">
-                                                <li><a href="#"><span class="waituk-icon-facebook"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                                <li><a href="#"><span class="waituk-icon-twitter"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                            </ul>
+                                        <div class="post-text-block bg-gray-light">
+                                            <strong title="{{ $event->title }}" class="content-title mb-0"
+                                                style="display: -webkit-box;
+                                            -webkit-line-clamp: 1;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;">{{ $event->title }}</strong>
+                                            <p
+                                                style="display: -webkit-box;
+                                            -webkit-line-clamp: 4;
+                                            -webkit-box-orient: vertical;
+                                            overflow: hidden;">
+                                                {{ $event->extract }}</p>
+                                            <div class="post-meta clearfix">
+                                                <div class="post-link-holder">
+                                                    <a href="#">Ver más <span class="fa fa-arrow-right"><span
+                                                                class="sr-only">&nbsp;</span></span></a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
+                    @endif
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4 bottom-space">
+                        <a href="#"
+                            class="btn btn-small-font btn-primary has-shadow has-radius-small">Explore<span
+                                class="c-ripple js-ripple"><span class="c-ripple__circle"></span></span></a>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="col-wrap">
-                            <div class="post-grid">
-                                <div class="img-block">
-                                    <img src="img/img-18.jpg" alt="images">
-                                </div>
-                                <div class="post-text-block bg-gray-light">
-                                    <strong class="content-title mb-0">Working Remotely</strong>
-                                    <span class="content-sub-title">Home office working for you.</span>
-                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
-                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
-                                    <div class="post-meta clearfix">
-                                        <div class="post-link-holder">
-                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
-                                                        class="sr-only">&nbsp;</span></span></a>
-                                        </div>
-                                        <div class="post-social text-right">
-                                            <ul class="social-network social-small">
-                                                <li><a href="#"><span class="waituk-icon-facebook"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                                <li><a href="#"><span class="waituk-icon-twitter"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="col-wrap">
-                            <div class="post-grid">
-                                <div class="img-block">
-                                    <img src="img/img-08.jpg" alt="images">
-                                </div>
-                                <div class="post-text-block bg-gray-light">
-                                    <strong class="content-title mb-0">Leaving With A Note</strong>
-                                    <span class="content-sub-title">If you want to get back again.</span>
-                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
-                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
-                                    <div class="post-meta clearfix">
-                                        <div class="post-link-holder">
-                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
-                                                        class="sr-only">&nbsp;</span></span></a>
-                                        </div>
-                                        <div class="post-social text-right">
-                                            <ul class="social-network social-small">
-                                                <li><a href="#"><span class="waituk-icon-facebook"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                                <li><a href="#"><span class="waituk-icon-twitter"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="col-wrap">
-                            <div class="post-grid">
-                                <div class="img-block">
-                                    <img src="img/img-07.jpg" alt="images">
-                                </div>
-                                <div class="post-text-block bg-gray-light">
-                                    <strong class="content-title mb-0">Break Timings</strong>
-                                    <span class="content-sub-title">Spending them wisely.</span>
-                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
-                                        aliquet. Auctor, nisi elit consequat ipsum,</p>
-                                    <div class="post-meta clearfix">
-                                        <div class="post-link-holder">
-                                            <a href="#">Read Story <span class="fa fa-arrow-right"><span
-                                                        class="sr-only">&nbsp;</span></span></a>
-                                        </div>
-                                        <div class="post-social text-right">
-                                            <ul class="social-network social-small">
-                                                <li><a href="#"><span class="waituk-icon-facebook"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                                <li><a href="#"><span class="waituk-icon-twitter"><span
-                                                                class="sr-only">&nbsp;</span></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-sm-4"></div>
                 </div>
             </div>
         </section>
@@ -430,69 +326,33 @@
         <section class="content-block">
             <div class="container">
                 <div class="block-heading bottom-space">
-                    <h3 class="block-top-heading">WHO WE ARE</h3>
-                    <h2 class="block-main-heading">TEAM WORK</h2>
-                    <span class="block-sub-heading">We really love what we do & our work on every project truly
-                        reflects that.</span>
+                    <h3 class="block-top-heading">QUIENES SOMOS</h3>
+                    <h2 class="block-main-heading">EQUIPO DE TRABAJO</h2>
+                    <span class="block-sub-heading">Nos encanta lo que hacemos y nuestro trabajo en cada proyecto lo
+                        refleja.</span>
                     <div class="divider"><img src="img/divider.png" alt="images description"></div>
                 </div>
                 <div class="team-container">
                     <div class="owl-carousel group-slide bottom-m-space">
-                        <div class="slide-item">
-                            <figure class="team-box caption-fade-up">
-                                <div class="img-block rev-gray-scale">
-                                    <img src="img/team-02.jpg" alt="images description">
+                        @if ($members->count())
+                            @foreach ($members as $user)
+                                <div class="slide-item">
+                                    <figure class="team-box caption-fade-up">
+                                        <div class="img-block rev-gray-scale">
+                                            <img @if ($user->image) src="{{ Storage::url($user->image->url) }}"
+                                    @else
+                                    src="img/team-02.jpg" @endif
+                                                alt="images description">
+                                        </div>
+                                        <figcaption class="text-right">
+                                            <strong class="content-title mb-0">{{ $user->name }}
+                                                {{ $user->last_name }}</strong>
+                                            <span class="sub">{{ $user->name }}</span>
+                                        </figcaption>
+                                    </figure>
                                 </div>
-                                <figcaption class="text-right">
-                                    <strong class="content-title mb-0">JASON STRATHAM</strong>
-                                    <span class="sub">UI/UX GURU</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="team-box caption-fade-up">
-                                <div class="img-block rev-gray-scale">
-                                    <img src="img/team-01.jpg" alt="images description">
-                                </div>
-                                <figcaption class="text-right">
-                                    <strong class="content-title mb-0">JESSICA FIZOVIC</strong>
-                                    <span class="sub">UI/UX GURU</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="team-box caption-fade-up">
-                                <div class="img-block rev-gray-scale">
-                                    <img src="img/team-03.jpg" alt="images description">
-                                </div>
-                                <figcaption class="text-right">
-                                    <strong class="content-title mb-0">JAMES NASS</strong>
-                                    <span class="sub">UI/UX GURU</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="team-box caption-fade-up">
-                                <div class="img-block rev-gray-scale">
-                                    <img src="img/team-02.jpg" alt="images description">
-                                </div>
-                                <figcaption class="text-right">
-                                    <strong class="content-title mb-0">STEVE MANNING</strong>
-                                    <span class="sub">UI/UX GURU</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="slide-item">
-                            <figure class="team-box caption-fade-up">
-                                <div class="img-block rev-gray-scale">
-                                    <img src="img/team-01.jpg" alt="images description">
-                                </div>
-                                <figcaption class="text-right">
-                                    <strong class="content-title mb-0">JESSICA FIZOVIC</strong>
-                                    <span class="sub">UI/UX GURU</span>
-                                </figcaption>
-                            </figure>
-                        </div>
+                            @endforeach
+                        @endif
                     </div>
                     <p> Martin loves gossiping code on his iPhone. Consectetur adipisicing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -509,35 +369,35 @@
                             <div class="icon">
                                 <span class="custom-icon-projects"></span>
                             </div>
-                            <h3 class="number">505</h3>
-                            <div class="text text-uppercase">TOTAL PROJECTS</div>
+                            <h3 class="number">{{ $projects_count }}</h3>
+                            <div class="text text-uppercase">TOTAL PROYECTOS</div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="col-wrap">
                             <div class="icon">
-                                <span class="custom-icon-smile"></span>
+                                <span class="custom-icon-calendar"></span>
                             </div>
-                            <h3 class="number">220</h3>
-                            <div class="text text-uppercase">SATISFIED CLIENTS</div>
+                            <h3 class="number">{{ $events_count }}</h3>
+                            <div class="text text-uppercase">TOTAL EVENTOS</div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="col-wrap">
                             <div class="icon">
-                                <span class="custom-icon-award"></span>
+                                <span class="custom-icon-user"></span>
                             </div>
-                            <h3 class="number">720</h3>
-                            <div class="text text-uppercase">AWARDS WON</div>
+                            <h3 class="number">{{ $users_count }}</h3>
+                            <div class="text text-uppercase">TOTAL USUARIOS</div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="col-wrap">
                             <div class="icon">
-                                <span class="custom-icon-celebrate"></span>
+                                <span class="custom-icon-heart"></span>
                             </div>
-                            <h3 class="number">707</h3>
-                            <div class="text text-uppercase">MILESTONES MET</div>
+                            <h3 class="number">{{ $members_count }}</h3>
+                            <div class="text text-uppercase">TOTAL MIEMBROS</div>
                         </div>
                     </div>
                 </div>
@@ -546,78 +406,31 @@
         <section class="content-block bg-gray-light">
             <div class="container">
                 <div class="block-heading bottom-space text-center">
-                    <h3 class="block-top-heading">HEAR FROM</h3>
-                    <h2 class="block-main-heading">TESTIMONIALS</h2>
-                    <span class="block-sub-heading">We always listen to our clients.</span>
+                    <h3 class="block-top-heading">ESCUCHAR</h3>
+                    <h2 class="block-main-heading">TESTIMONIOS</h2>
+                    <span class="block-sub-heading">Siempre escuchamos las sugerencias.</span>
                     <div class="divider"><img src="img/divider.png" alt="images description"></div>
                 </div>
                 <div class="testimonial-container text-center">
                     <div class="owl-carousel testimonial-slide" id="waituk-owl-slide-3">
-                        <div class="slide-item">
-                            <div class="team-wrap">
-                                <div class="img-block">
-                                    <img src="img/people-01.jpg" alt="images description">
+                        @if ($testimonials->count())
+                            @foreach ($testimonials as $testimonial)
+                                <div class="slide-item">
+                                    <div class="team-wrap">
+                                        <div class="img-block">
+                                            <img @if ($testimonial->image) src="{{Storage::url($testimonial->image->url)}}"
+                                            @else
+                                            src="img/people-01.jpg" @endif
+                                                alt="images description">
+                                        </div>
+                                        <div class="text-wrap">
+                                            <h2>{{ $testimonial->name }} {{ $testimonial->last_name }}</h2>
+                                            <p>{{ $testimonial->description }}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text-wrap">
-                                    <h2>Natalie Fullick</h2>
-                                    <span class="designation bottom-m-space">CEO - ENVATO INC.</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="team-wrap">
-                                <div class="img-block">
-                                    <img src="img/people-02.jpg" alt="images description">
-                                </div>
-                                <div class="text-wrap">
-                                    <h2>Jason Doe</h2>
-                                    <span class="designation bottom-m-space">CEO - ENVATO INC.</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="team-wrap">
-                                <div class="img-block">
-                                    <img src="img/people-03.jpg" alt="images description">
-                                </div>
-                                <div class="text-wrap">
-                                    <h2>Jake Grahm</h2>
-                                    <span class="designation bottom-m-space">CEO - ENVATO INC.</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="team-wrap">
-                                <div class="img-block">
-                                    <img src="img/people-02.jpg" alt="images description">
-                                </div>
-                                <div class="text-wrap">
-                                    <h2>Natalie Fullick</h2>
-                                    <span class="designation bottom-m-space">CEO - ENVATO INC.</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <div class="team-wrap">
-                                <div class="img-block">
-                                    <img src="img/people-01.jpg" alt="images description">
-                                </div>
-                                <div class="text-wrap">
-                                    <h2>Natalie Fullick</h2>
-                                    <span class="designation bottom-m-space">CEO - ENVATO INC.</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

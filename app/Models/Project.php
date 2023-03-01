@@ -64,4 +64,11 @@ class Project extends Model
     {
         return $this->belongsToMany(Knowledge::class);
     }
+
+    //Relación uno a uno polimorfica
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 }

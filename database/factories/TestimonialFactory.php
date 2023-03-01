@@ -24,8 +24,8 @@ class TestimonialFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->unique()->sentence(),
-            'last_name' => $this->faker->unique()->sentence(),
+            'name' => $this->faker->unique()->name(),
+            'last_name' => $this->faker->unique()->name(),
             'description' => $this->faker->text(250),
             'project_id' => Project::all()->random()->id,
         ];
