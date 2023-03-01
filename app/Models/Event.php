@@ -28,6 +28,13 @@ class Event extends Model
         return $this->belongsTo(Category::class);
     }
 
+    //Relación uno a muchos
+
+    public function suggestions()
+    {
+        return $this->hasMany(Suggestion::class);
+    }
+
     //Relación muchos a muchos
 
     public function tags()

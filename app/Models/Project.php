@@ -30,11 +30,38 @@ class Project extends Model
         return $this->belongsTo(Category::class);
     }
 
+    //Relación uno a muchos
+
+    public function suggestions()
+    {
+        return $this->hasMany(Suggestion::class);
+    }
+
+    public function objetives()
+    {
+        return $this->hasMany(Objetive::class);
+    }
+
+    public function testimonials()
+    {
+        return $this->hasMany(Testimonial::class);
+    }
+
 
     //Relación muchos a muchos
 
     public function ods()
     {
         return $this->belongsToMany(ODS::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
+    public function knowledge()
+    {
+        return $this->belongsToMany(Knowledge::class);
     }
 }
