@@ -14,12 +14,12 @@
                     data-target="#mega-menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand mr-auto m-sm-auto" href="/"> <img src="img/logo.svg" alt="roxine">
-                    <img src="img/logo-dark.svg" alt="roxine"> </a>
+                <a class="navbar-brand mr-auto m-sm-auto" href="/"> <img src="/img/logo.svg" alt="roxine">
+                    <img src="/img/logo-dark.svg" alt="roxine"> </a>
                 <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" href="{{ route('index.index') }}" > Home
+                            <a class="dropdown-toggle" href="{{ route('index.index') }}"> Inicio
                             </a>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">
@@ -31,63 +31,45 @@
                                 Eventos </a>
                         </li>
                         <li class="dropdown dropdown-full-width-g" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
-                                data-title="Pages">Miembros </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-title="Pages">Miembros
+                            </a>
                         </li>
                         <li>
                             <a href="contact.html"> Contacto </a>
                         </li>
-                        <li class="dropdown cart-list margin-0-sm">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span
-                                    class="hidden-lg-up"> Shopping Cart </span><i
-                                    class="custom-icon-user m-marker"></i></a>
-                            <div class="dropdown-menu-container">
-                                <div class="dropdown-menu no-border-radius col-lg-1 col-md-4 col-sm-4">
-                                    <h4> Shopping Cart </h4>
-                                    <ul class="s-list no-padding">
-                                        <li class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-5 col">
-                                                <div class="img">
-                                                    <a href="#"><img src="img/img-02.jpg"
-                                                            alt="image description"></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-7 col">
-                                                <h6> <a href="#"><strong>Product 1 </strong></a><span
-                                                        class="text-muted float-right"> x 1 </span></h6>
-                                                <h6> $199 </h6>
-                                            </div>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-5 col">
-                                                <div class="img">
-                                                    <a href="#"><img src="img/img-02.jpg"
-                                                            alt="image description"></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-7 col">
-                                                <h6> <a href="#"><strong>Product 2 </strong></a><span
-                                                        class="text-muted float-right"> x 2 </span></h6>
-                                                <h6> $199 </h6>
-                                            </div>
-                                        </li>
-                                        <li class="divider margin-bottom-1"></li>
-                                        <li class="row">
-                                            <div class="col-lg-4 col-md-4 col-sm-5 col">
-                                                <h2> Total </h2>
-                                            </div>
-                                            <div class="col-lg-8 col-md-8 col-sm-7 col">
-                                                <h2 class="text-right"> $3300 </h2>
-                                            </div>
-                                        </li>
-                                        <li><a href="#"
-                                                class="btn btn-sm btn-block btn-secondary btn-mina btn-mina-rip-br">
-                                                View Cart </a></li>
-                                    </ul>
+                        @auth
+                            <li class="dropdown cart-list margin-0-sm">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i
+                                    class="custom-icon-user m-marker"></i> Hola {{auth()->user()->name}}</a>
+                                <div class="dropdown-menu-container">
+                                    <div class="dropdown-menu no-border-radius col-lg-1 col-md-4 col-sm-4 fadeIn animated">
+                                        <ul class="s-list no-padding">
+                                            <li><a href="{{ route('profile.show') }}">Tu perfil</a></li>
+                                            <li>
+                                                @can('admin.home')
+                                                    <a href="{{ route('admin.home') }}">Dashboard</a>
+                                                @endcan
+                                            </li>
+
+                                            <form method="POST" action="{{ route('logout') }}">
+                                                @csrf
+                                                <li style="list-style: none;" class="pt-3">
+                                                    <a href="{{ route('logout') }}"
+                                                        onclick="event.preventDefault();
+                                                        this.closest('form').submit();">Cerrar Sesión
+                                                    </a>
+                                                </li>
+                                            </form>
+
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ route('login') }}"> <span class="custom-icon-user"></span> Login </a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </nav>

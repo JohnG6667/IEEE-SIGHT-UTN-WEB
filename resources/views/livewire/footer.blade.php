@@ -5,22 +5,15 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="footer-logo mt-2">
-                        <img src="img/logo-dark.svg" alt="image-description">
+                        <img src="/img/logo-dark.svg" alt="image-description">
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="waituk_newsletter-form newsletter-v1 mt-2">
-                        <form action="#" method="post">
-                            <fieldset class="clearfix">
-                                <div class="form-group input-holder">
-                                    <input type="email" class="form-control" placeholder="Email Address">
-                                    <button type="submit" class="btn"><i class="fa fa-send"></i></button>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
                     <div class="my-4">
-                        <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt
+                        <p>Sé más que un ingeniero, sé IEEE
+                        </p>
+                        <br>
+                        <p>Sé más que un ingeniero, sé IEEE
                         </p>
                     </div>
                 </div>
@@ -64,7 +57,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 pb-3">
-                        <p>Copyright 2016 - Waituk </p>
+                        <p>CIEEE - Universidad Técnica del Norte Student Branch© - 2023</p>
                     </div>
                     <div class="col-md-6">
                         <ul class="social-network with-text">

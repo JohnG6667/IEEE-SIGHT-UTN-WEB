@@ -352,10 +352,10 @@ $(document).ready(function() {
     });
 
     // select picker
-    $(function() {
+/*     $(function() {
         $('.selectpicker').selectpicker();
 
-    });
+    }); */
 
     /**
      * search screen plugin

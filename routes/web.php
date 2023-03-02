@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index'])->name('index.index');
 
 Route::get('about', [AboutController::class, 'index'])->name('index.about');
+
+//EVENTOS
+
+Route::get('events/{event}', [EventController::class, 'show'])->name('events.show');

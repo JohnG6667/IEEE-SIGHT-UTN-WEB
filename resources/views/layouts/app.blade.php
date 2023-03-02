@@ -34,8 +34,6 @@
     <link rel="stylesheet" type="text/css" href="/vendors/rev-slider/revolution/css/navigation.css">
     <!-- Theme CSS -->
     <link media="all" rel="stylesheet" href="/css/main.css">
-    <!-- Custom CSS -->
-    <link media="all" rel="stylesheet" href="/css/custom.css">
 </head>
 
 <body>

@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('place')->nullable();
             $table->date('event_date')->nullable();
 
+            $table->integer('views')->default(0);
+
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
 

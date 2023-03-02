@@ -232,7 +232,7 @@
                                                 {{ $event->extract }}</p>
                                             <div class="post-meta clearfix">
                                                 <div class="post-link-holder">
-                                                    <a href="#">Ver más <span class="fa fa-arrow-right"><span
+                                                    <a href="{{route('events.show', $event)}}">Ver más <span class="fa fa-arrow-right"><span
                                                                 class="sr-only">&nbsp;</span></span></a>
                                                 </div>
                                             </div>
@@ -245,7 +245,7 @@
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4 bottom-space">
                         <a href="#"
-                            class="btn btn-small-font btn-primary has-shadow has-radius-small">Explore<span
+                            class="btn btn-small-font btn-primary has-shadow has-radius-small">Ver Todos<span
                                 class="c-ripple js-ripple"><span class="c-ripple__circle"></span></span></a>
                     </div>
                     <div class="col-sm-4"></div>
@@ -435,29 +435,6 @@
                 </div>
             </div>
         </section>
-        <aside class="content-block">
-            <div class="container">
-                <div class="logo-container">
-                    <div class="owl-carousel logo-slide" id="waituk-owl-slide-4">
-                        <div class="slide-item">
-                            <img src="img/logo-01.png" alt="images description">
-                        </div>
-                        <div class="slide-item">
-                            <img src="img/logo-02.png" alt="images description">
-                        </div>
-                        <div class="slide-item">
-                            <img src="img/logo-03.png" alt="images description">
-                        </div>
-                        <div class="slide-item">
-                            <img src="img/logo-04.png" alt="images description">
-                        </div>
-                        <div class="slide-item">
-                            <img src="img/logo-03.png" alt="images description">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
     </div>
     <!--/main content wrapper -->
 </x-app-layout>

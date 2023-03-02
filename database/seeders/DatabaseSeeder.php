@@ -29,8 +29,17 @@ class DatabaseSeeder extends Seeder
         Storage::disk('public')->deleteDirectory('events');
         Storage::disk('public')->makeDirectory('events');
 
+        User::create([
+            'name' => 'Prueba',
+            'last_name' => 'Last_Name Prueba',
+            'phone' => '123456789',
+            'status' => 1,
+            'email' => 'prueba@gmail.com',
+            'password' => bcrypt('prueba')
+        ]);
+
         User::factory(10)->create();
-        About::factory(20)->create();
+        About::factory(4)->create();
         Category::factory(5)->create();
         Tag::factory(30)->create();
         $this->call(EventSeeder::class);
