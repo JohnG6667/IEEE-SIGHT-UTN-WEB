@@ -29,7 +29,8 @@ class DatabaseSeeder extends Seeder
         Storage::disk('public')->deleteDirectory('events');
         Storage::disk('public')->makeDirectory('events');
 
-        User::factory(10)->create();
+
+        $this->call(UserSeeder::class);
         About::factory(20)->create();
         Category::factory(5)->create();
         Tag::factory(30)->create();
