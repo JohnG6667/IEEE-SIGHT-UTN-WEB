@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index'])->name('index.index');
 
-/*
-Route::middleware([
+
+/*Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
@@ -26,4 +26,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
- */
+*/
