@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'IEEE SIGHT WEB',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>IEEE</b> SIGHT WEB',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -293,7 +293,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Buscar Funcionalidad',
             'topnav_right' => true,
         ],
         [
@@ -311,77 +311,84 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        ['header' => 'Opciones de Usuario'],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Perfil',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
+
+        ['header' => 'Opciones Generales'],
+        //Opciones de parametrización
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Parametrización',
+            'icon'    => 'fas fa-fw fa-list',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Categorías',
+                    'route'  => 'admin.categories.index',
+                    'icon'    => 'fas fa-fw fa-star',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Etiquetas',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-tag',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'ODS',
                     'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-globe',
                 ],
             ],
         ],
-        ['header' => 'labels'],
+
+        ['header' => 'Administración de Usuarios'],
+        //Opciones de gestión de usaurios
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'    => 'Opciones',
+            'icon'    => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Usuarios',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-user-plus',
+                ],
+                [
+                    'text' => 'Usuarios',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-tag',
+                ],
+                [
+                    'text' => 'ODS',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-globe',
+                ],
+            ],
         ],
+
+
+        ['header' => 'Administración de Publicaciones'],
+        //Opciones de gestión de usaurios
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text'    => 'Tipos de Publicaciones',
+            'icon'    => 'fas fa-fw fa-book',
+            'submenu' => [
+                [
+                    'text' => 'Eventos',
+                    'route'  => 'admin.events.index',
+                    'icon'    => 'fas fa-fw fa-calendar',
+                ],
+                [
+                    'text' => 'Proyectos',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-list-check',
+                ],
+                [
+                    'text' => 'ODS',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-globe',
+                ],
+            ],
         ],
     ],
 
@@ -537,5 +544,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
