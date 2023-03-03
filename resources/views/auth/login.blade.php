@@ -88,7 +88,7 @@
                                             <button id="btn_sent" type="submit" class="btn btn-primary has-radius-small">Inisiar Sesión</button>
                                         </div>
                                         <p>¿Aún no tiene una cuenta?
-                                            <a href="#"> Regístrate. </a></p>
+                                            <a href="{{ route('register') }}"> Regístrate. </a></p>
                                     </form>
                                 </div>
                             </div>
