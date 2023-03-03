@@ -331,7 +331,7 @@ return [
                 ],
                 [
                     'text' => 'Etiquetas',
-                    'url'  => '#',
+                    'route'  => 'admin.tags.index',
                     'icon'    => 'fas fa-fw fa-tag',
                 ],
                 [

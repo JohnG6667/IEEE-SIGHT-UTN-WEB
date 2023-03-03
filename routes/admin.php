@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\EventController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,7 @@ Route::resource('categories', CategoryController::class)->except('show')->names(
 
 //--Ruta Administración Eventos--//
 Route::resource('events', EventController::class)->except('show')->names('admin.events');
+
+//--Ruta Administración Etiquetas--//
+Route::resource('tags', TagController::class)->except('show')->names('admin.tags');
+
