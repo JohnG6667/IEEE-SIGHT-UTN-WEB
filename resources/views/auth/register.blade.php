@@ -108,8 +108,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>By clicking on the “Create Account” button below, you are agreeing to
-                                            <a href="#"> our terms of services. </a>
+                                        <p>Al hacer clic en el botón "Crear cuenta", acepta nuestras condiciones de servicio.
+                                            <a href="#">nuestras condiciones de servicio. </a>
                                         </p>
                                         <div class="btn-container mt-xl-5 mt-lg-2">
                                             <button id="btn_sent" class="btn btn-primary has-radius-small">CREATE
