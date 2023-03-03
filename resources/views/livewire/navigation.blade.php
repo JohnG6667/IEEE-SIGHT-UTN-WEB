@@ -31,11 +31,11 @@
                                 Eventos </a>
                         </li>
                         <li class="dropdown dropdown-full-width-g" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-title="Pages">Miembros
+                            <a class="dropdown-toggle" href="{{ route('index.members') }}">Miembros
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html"> Contacto </a>
+                            <a  href="{{ route('index.contactUs') }}"> Contacto </a>
                         </li>
                         @auth
                             <li class="dropdown cart-list margin-0-sm">
