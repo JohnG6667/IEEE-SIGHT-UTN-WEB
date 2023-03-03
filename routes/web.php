@@ -27,6 +27,7 @@ Route::get('members',[MembersController::class,'index'])->name('index.members');
 Route::get('contactUs',[ContactUsController::class,'index'])->name('index.contactUs');
 
 //EVENTOS
+Route::get('events', [EventController::class, 'index'])->name('events.index');
 
 Route::get('events/{event}', [EventController::class, 'show'])->name('events.show');
 

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->enum('status', [1,2])->default(1);
             $table->string('entity')->nullable();
             $table->string('place')->nullable();
-            $table->date('event_date')->nullable();
+            $table->timestamp('event_date')->nullable();
 
             $table->integer('views')->default(0);
 

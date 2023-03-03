@@ -27,7 +27,7 @@
                                 Sobre Nosotros </a>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" data-title="Home">
+                            <a class="dropdown-toggle" href="{{route('events.index')}}" data-title="Home">
                                 Eventos </a>
                         </li>
                         <li class="dropdown dropdown-full-width-g" data-animation="fadeIn">

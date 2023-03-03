@@ -219,11 +219,11 @@
                                                 alt="images">
                                         </div>
                                         <div class="post-text-block bg-gray-light">
-                                            <strong title="{{ $event->title }}" class="content-title mb-0"
+                                            <a href="{{route('events.show', $event)}}"><strong title="{{ $event->title }}" class="content-title mb-0"
                                                 style="display: -webkit-box;
                                             -webkit-line-clamp: 1;
                                             -webkit-box-orient: vertical;
-                                            overflow: hidden;">{{ $event->title }}</strong>
+                                            overflow: hidden;">{{ $event->title }}</strong></a>
                                             <p
                                                 style="display: -webkit-box;
                                             -webkit-line-clamp: 4;
@@ -244,7 +244,7 @@
                     @endif
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4 bottom-space">
-                        <a href="#"
+                        <a href="{{route('events.index')}}"
                             class="btn btn-small-font btn-primary has-shadow has-radius-small">Ver Todos<span
                                 class="c-ripple js-ripple"><span class="c-ripple__circle"></span></span></a>
                     </div>

@@ -7,7 +7,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro laudantium sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <div class="breadcrumb-block">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
+                                        <li class="breadcrumb-item"><a href="{{ route('index.index') }}"> Inicio </a></li>
                                         <li class="breadcrumb-item"><a href="index.html"> Elements </a></li>
                                         <li class="breadcrumb-item active"> Animations </li>
                                     </ol>

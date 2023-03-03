@@ -8,11 +8,11 @@
                 <div class="container">
                     <div class="visual-text visual-center">
                         <div class="visual-title">
-                            <h1>SOBRE IEEE SIGHT</h1>
+                            <h1 class="visual-title visual-sub-title">SOBRE IEEE SIGHT</h1>
                         </div>
                         <div class="breadcrumb-block">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html"> Iinicio </a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('index.index') }}"> Iinicio </a></li>
                                 <li class="breadcrumb-item active"> Sobre Nosotros </li>
                             </ol>
                         </div>
@@ -78,7 +78,7 @@
                 <div class="inner-wrapper text-white">
                     <h3>“Si tus acciones inspiran a otros a soñar más, aprender más, hacer más y convertirse en algo más, entonces eres un líder” – John Quincy Adams</h3>
                     <div class="btn-container">
-                        <a href="#" class="btn btn-primary">CONTÁCTANOS</a>
+                        <a href="{{route('index.contactUs')}}" class="btn btn-primary">CONTÁCTANOS</a>
                     </div>
                 </div>
             </div>

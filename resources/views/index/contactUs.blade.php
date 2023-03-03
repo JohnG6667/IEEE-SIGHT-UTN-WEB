@@ -7,7 +7,7 @@
                                     <h1 class="visual-title visual-sub-title">Contactanos</h1>
                                     <div class="breadcrumb-block">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
+                                            <li class="breadcrumb-item"><a href="{{ route('index.index') }}"> Inicio </a></li>
                                             <li class="breadcrumb-item active"> Contact Us </li>
                                         </ol>
                                     </div>
