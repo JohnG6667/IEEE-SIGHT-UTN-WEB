@@ -25,7 +25,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'last_name',
         'email',
+        'phone',
         'password',
     ];
 
@@ -61,7 +63,7 @@ class User extends Authenticatable
 
 
 
-    //Relación uno a uno 
+    //Relación uno a uno
     public function member()
     {
         return $this->hasOne(Member::class);
