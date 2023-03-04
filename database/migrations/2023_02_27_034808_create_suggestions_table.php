@@ -16,9 +16,7 @@ return new class extends Migration
         Schema::create('suggestions', function (Blueprint $table) {
             $table->id();
 
-            $table->string('title');
             $table->longText('description');
-            $table->string('place');
             $table->enum('status', [1,2])->default(1);
 
             $table->unsignedBigInteger('user_id');
