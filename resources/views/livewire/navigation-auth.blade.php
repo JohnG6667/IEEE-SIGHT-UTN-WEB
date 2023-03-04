@@ -31,7 +31,7 @@
                                     <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius fadeIn animated">
                                         @if ($categories->count())
                                             @foreach ($categories as $category)
-                                                <li><a href="portfolio-no-sidebar-2-col.html"> {{ $category->name }}
+                                                <li><a href="{{route('events.category', $category)}}"> {{ $category->name }}
                                                     </a></li>
                                             @endforeach
                                             <li><a href="portfolio-no-sidebar-2-col.html"> Ver todas... </a></li>
@@ -46,7 +46,7 @@
                                     <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
                                         @if ($tags->count())
                                             @foreach ($tags as $tag)
-                                                <li><a href="portfolio-no-sidebar-2-col.html"> {{ $tag->name }}
+                                                <li><a href="{{route('events.tag', $tag)}}"> {{ $tag->name }}
                                                     </a></li>
                                             @endforeach
                                             <li><a href="portfolio-no-sidebar-2-col.html"> Ver todas... </a></li>

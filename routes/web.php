@@ -33,4 +33,6 @@ Route::get('events/{event}', [EventController::class, 'show'])->name('events.sho
 
 Route::get('events/category/{category}', [EventController::class, 'category'])->name('events.category');
 
+Route::get('events/tag/{tag}', [EventController::class, 'tag'])->name('events.tag');
+
 

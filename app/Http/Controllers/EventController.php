@@ -14,11 +14,7 @@ class EventController extends Controller
     {
         $events = Event::where('status', 1)->latest('id')->paginate(6);
 
-        $tags = Tag::take(8)->orderBy('views', 'DESC')->get();
-
-        $popular_events = Event::where('status', 1)->orderBy('views', 'DESC')->paginate(4);
-
-        return view('event.index', compact('events', 'tags', 'popular_events'));
+        return view('event.index', compact('events'));
     }
 
     public function show(Event $event)
@@ -41,10 +37,19 @@ class EventController extends Controller
             ->latest('id')
             ->paginate(6);
 
-        $tags = Tag::take(8)->orderBy('views', 'DESC')->get();
+        $category->increment('views');
 
-        $popular_events = Event::where('status', 1)->orderBy('views', 'DESC')->paginate(4);
+        return view('event.category', compact('events', 'category'));
+    }
 
-        return view('event.category', compact('events', 'tags', 'popular_events', 'category'));
+    public function tag(Tag $tag)
+    {
+        $events = $tag->events()->where('status', 1)
+            ->latest('id')
+            ->paginate(6);
+
+        $tag->increment('views');
+
+        return view('event.tag', compact('events', 'tag'));
     }
 }
