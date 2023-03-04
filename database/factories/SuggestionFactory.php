@@ -23,9 +23,7 @@ class SuggestionFactory extends Factory
         $name = $this->faker->unique()->sentence();
 
         return [
-            'title' =>  $this->faker->unique()->sentence(),
             'description' => $this->faker->text(250),
-            'place' => $this->faker->sentence(),
             'status' => $this->faker->randomElement([1, 2]),
             'user_id' => User::all()->random()->id,
             'project_id' => Project::all()->random()->id,
