@@ -2,12 +2,18 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Category;
+use App\Models\Tag;
 use Livewire\Component;
 
 class NavigationAuth extends Component
 {
     public function render()
     {
-        return view('livewire.navigation-auth');
+        $categories = Category::take(5)->orderBy('views', 'DESC')->get();
+
+        $tags = Tag::take(5)->orderBy('views', 'DESC')->get();
+
+        return view('livewire.navigation-auth' , compact('categories', 'tags'));
     }
 }

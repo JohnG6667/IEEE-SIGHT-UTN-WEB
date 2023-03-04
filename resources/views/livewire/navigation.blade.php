@@ -27,20 +27,53 @@
                                 Sobre Nosotros </a>
                         </li>
                         <li class="dropdown" data-animation="fadeIn">
-                            <a class="dropdown-toggle" href="{{route('events.index')}}" data-title="Home">
-                                Eventos </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home">
+                                EVENTOS </a>
+                            <ul class="dropdown-menu no-border-radius fadeIn animated">
+                                <li class="dropdown dropdown-left dropdown-parent">
+                                    <a class="sub-marker" href="#"> Categorías <i
+                                            class="icon-ios-more icn-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius fadeIn animated">
+                                        @if ($categories->count())
+                                            @foreach ($categories as $category)
+                                                <li><a href="portfolio-no-sidebar-2-col.html"> {{ $category->name }}
+                                                    </a></li>
+                                            @endforeach
+                                            <li><a href="portfolio-no-sidebar-2-col.html"> Ver todas... </a></li>
+                                        @else
+                                            <li>Sin Categorías</li>
+                                        @endif
+                                    </ul>
+                                </li>
+                                <li class="dropdown dropdown-left dropdown-parent">
+                                    <a class="sub-marker" href="#"> Etiquetas <i
+                                            class="icon-ios-more icn-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                        @if ($tags->count())
+                                            @foreach ($tags as $tag)
+                                                <li><a href="portfolio-no-sidebar-2-col.html"> {{ $tag->name }}
+                                                    </a></li>
+                                            @endforeach
+                                            <li><a href="portfolio-no-sidebar-2-col.html"> Ver todas... </a></li>
+                                        @else
+                                            <li>Sin Tags</li>
+                                        @endif
+                                    </ul>
+                                </li>
+                                <li><a href="{{ route('events.index') }}">Ver todos... </a></li>
+                            </ul>
                         </li>
                         <li class="dropdown dropdown-full-width-g" data-animation="fadeIn">
                             <a class="dropdown-toggle" href="{{ route('index.members') }}">Miembros
                             </a>
                         </li>
                         <li>
-                            <a  href="{{ route('index.contactUs') }}"> Contacto </a>
+                            <a href="{{ route('index.contactUs') }}"> Contacto </a>
                         </li>
                         @auth
                             <li class="dropdown cart-list margin-0-sm">
-                                <a class="dropdown-toggle" data-toggle="dropdown"><i
-                                    class="custom-icon-user m-marker"></i> Hola {{auth()->user()->name}}</a>
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="custom-icon-user m-marker"></i>
+                                    Hola {{ auth()->user()->name }}</a>
                                 <div class="dropdown-menu-container">
                                     <div class="dropdown-menu no-border-radius col-lg-1 col-md-4 col-sm-4 fadeIn animated">
                                         <ul class="s-list no-padding">
@@ -56,7 +89,8 @@
                                                 <li style="list-style: none;" class="pt-3">
                                                     <a href="{{ route('logout') }}"
                                                         onclick="event.preventDefault();
-                                                        this.closest('form').submit();">Cerrar Sesión
+                                                        this.closest('form').submit();">Cerrar
+                                                        Sesión
                                                     </a>
                                                 </li>
                                             </form>
