@@ -8,6 +8,8 @@ use App\Models\Event;
 use App\Models\Suggestion;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class EventController extends Controller
 {
@@ -64,6 +66,8 @@ class EventController extends Controller
             'description' => $request['description'],
             'event_id' => $request['event_id'],
         ]);
+
+        Alert::success('COMENTARIO REGISTRADO', 'Gracias ' . auth()->user()->name . ' por su comentario, nos ayuda a crecer.');
 
         $event = Event::find($request['event_id']);
 

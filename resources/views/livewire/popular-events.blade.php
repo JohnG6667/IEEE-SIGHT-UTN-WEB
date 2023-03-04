@@ -22,7 +22,7 @@
                                     overflow: hidden;"
                                         href="{{ route('events.show', $event) }}">{{ $event->title }}</a>
                                 </h6>
-                                <p><a href="{{ route('events.show', $event) }}">{{ $event->suggestions()->count() }}
+                                <p><a href="{{ route('events.show', $event) }}">{{ $event->suggestions()->where('status', 1)->count() }}
                                         Sugerencias</a></p>
                             </div>
                         </div>

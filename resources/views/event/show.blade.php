@@ -211,4 +211,6 @@
         </section>
     </div>
     <!--/main content wrapper -->
+    @include('sweetalert::alert')
+
 </x-app-layout>
