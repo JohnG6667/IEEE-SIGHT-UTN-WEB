@@ -67,6 +67,8 @@ class EventController extends Controller
             'event_id' => $request['event_id'],
         ]);
 
+        toast('Your Post as been submited!','success');
+
         Alert::success('COMENTARIO REGISTRADO', 'Gracias ' . auth()->user()->name . ' por su comentario, nos ayuda a crecer.');
 
         $event = Event::find($request['event_id']);
