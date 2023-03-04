@@ -95,28 +95,5 @@
                     <div class="map-holder embed-responsive-21by9 grayscaled-map">
                         <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.0605547231917!2d-0.33554378354576586!3d51.47540277962994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760cf99dee6c25%3A0xc9d2780dbbcbb933!2sLondon+Rd%2C+Isleworth+TW7%2C+UK!5e0!3m2!1sen!2snp!4v1473394388477" height="450" style="border:0"></iframe>
                     </div>
-                    <aside class="content-block">
-                        <div class="container">
-                            <div class="logo-container">
-                                <div class="owl-carousel logo-slide" id="waituk-owl-slide-4">
-                                    <div class="slide-item">
-                                        <img src="img/logo-01.png" alt="images description">
-                                    </div>
-                                    <div class="slide-item">
-                                        <img src="img/logo-02.png" alt="images description">
-                                    </div>
-                                    <div class="slide-item">
-                                        <img src="img/logo-03.png" alt="images description">
-                                    </div>
-                                    <div class="slide-item">
-                                        <img src="img/logo-04.png" alt="images description">
-                                    </div>
-                                    <div class="slide-item">
-                                        <img src="img/logo-03.png" alt="images description">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
                 </div>
 </x-app-layout>
