@@ -10,9 +10,9 @@ class NavigationAuth extends Component
 {
     public function render()
     {
-        $categories = Category::take(5)->orderBy('views', 'DESC')->get();
+        $categories = Category::take(5)->whereHas('events')->orderBy('views', 'DESC')->get();
 
-        $tags = Tag::take(5)->orderBy('views', 'DESC')->get();
+        $tags = Tag::take(5)->whereHas('events')->orderBy('views', 'DESC')->get();
 
         return view('livewire.navigation-auth' , compact('categories', 'tags'));
     }
