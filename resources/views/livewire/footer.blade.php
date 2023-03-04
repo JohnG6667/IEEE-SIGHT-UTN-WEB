@@ -18,36 +18,53 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <h4>Services</h4>
+                    <h4>Categorías</h4>
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Art Design</a></li>
-                            <li><a href="#">Consultation</a></li>
-                            <li><a href="#">Wordpress</a></li>
-                            <li><a href="#">Custom Work</a></li>
+                            @if ($categories->count())
+                                @foreach ($categories as $category)
+                                    <li title="{{ $category->name }}"><a href="{{ route('events.category', $category) }}"
+                                            style="display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;">{{ $category->name }}</a>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <h4>Company</h4>
+                    <h4>Tags</h4>
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">Policies</a></li>
+                            @if ($tags->count())
+                                @foreach ($tags as $tag)
+                                    <li title="{{ $tag->name }}"><a href="{{ route('events.tag', $tag) }}"
+                                            style="display: -webkit-box;
+                                        -webkit-line-clamp: 1;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;">{{ $tag->name }}</a>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <h4>In the News</h4>
+                    <h4>Eventos</h4>
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Women</a></li>
-                            <li><a href="#">Sales</a></li>
-                            <li><a href="#">About Us</a></li>
+                            @if ($popular_events->count())
+                                @foreach ($popular_events as $event)
+                                    <li title="{{ $event->title }}"><a href="{{ route('events.show', $event) }}"
+                                            style="display: -webkit-box;
+                                    -webkit-line-clamp: 1;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;">{{ $event->title }}</a>
+                                    </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                 </div>
