@@ -24,10 +24,12 @@ class CreateNewUser implements CreatesNewUsers
             'name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone' => ['required', 'string', 'max:10'],
+            'phone' => 'required|max:10|unique:users',
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
+
+        toast('Your Post as been submited!','success');
 
         Alert::success('BIENVENIDO/A', 'Tu registro se ha completado de manera exitosa.');
 
