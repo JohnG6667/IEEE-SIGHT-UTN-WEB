@@ -7,6 +7,7 @@
                 <div class="container">
                     <div class="visual-text visual-center">
                         <h1 class="visual-title visual-sub-title">EVENTOS Y ACTIVIDADES</h1>
+                        <h3 class="visual-sub-title" style="text-transform: uppercase;">CATEGORÍA {{$category->name}}</h3>
                         <div class="breadcrumb-block">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ route('index.index') }}"> Inicio </a></li>
@@ -96,8 +97,8 @@
                                                 <div class="post-avatar">
                                                     <a href="{{ route('events.show', $event) }}"><img
                                                             @if ($event->image) src="{{ Storage::url($event->image->url) }}"
-                                                    @else
-                                                    src="/img/thumb.jpg" @endif
+                                                        @else
+                                                        src="/img/thumb.jpg" @endif
                                                             alt="image description"></a>
                                                 </div>
                                                 <div class="post-desc">
