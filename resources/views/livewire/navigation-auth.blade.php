@@ -100,10 +100,6 @@
                         @endauth
                     </ul>
                 </div>
-                <div class="navbar-pos-search">
-                    <a href="#" class="x-search x-search-trigger navbar-link"><i class="waituk-icon-search"></i></a>
-                    <a href="#" class="x-search icon-close-round navbar-link"><i class="waituk-icon-close-round"></i></a>
-                </div>
             </nav>
         </div>
     </div>

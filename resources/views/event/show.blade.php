@@ -30,47 +30,29 @@
                         <ul class="content-list info-list">
                             <li class="row">
                                 <div class="col">
-                                    <span class="waituk-icon-folder"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Project Name</span>
+                                    <span class="custom-icon-folder"><span class="sr-only">&nbsp;</span></span>
+                                    <span class="text title">Entidad:</span>
                                 </div>
                                 <div class="col">
-                                    <p>Roxine Web Design</p>
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col">
-                                    <span class="waituk-icon-user"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Created By:</span>
-                                </div>
-                                <div class="col">
-                                    <p>Sanjeev Jha</p>
+                                    <p>{{$event->entity}}</p>
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col">
-                                    <span class="waituk-icon-calendar"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Completed on:</span>
+                                    <span class="custom-icon-calendar"><span class="sr-only">&nbsp;</span></span>
+                                    <span class="text title">Fecha:</span>
                                 </div>
                                 <div class="col">
-                                    <p>07th August 2017</p>
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col">
-                                    <span class="waituk-icon-skill"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Skills Used:</span>
-                                </div>
-                                <div class="col">
-                                    <p>PHP / MySQL / HTML5</p>
+                                    <p>{{ date('d M Y', strtotime($event->event_date)) }}</p>
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col">
-                                    <span class="waituk-icon-link2"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Client Name:</span>
+                                    <span class="custom-icon-skill"><span class="sr-only">&nbsp;</span></span>
+                                    <span class="text title">Autor:</span>
                                 </div>
                                 <div class="col">
-                                    <p><a href="#">Roxine Web Studio</a></p>
+                                    <p>{{$event->user->name}} {{$event->user->last_name}}</p>
                                 </div>
                             </li>
                         </ul>
@@ -79,47 +61,29 @@
                         <ul class="content-list info-list">
                             <li class="row">
                                 <div class="col">
-                                    <span class="waituk-icon-folder"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Project Name</span>
+                                    <span class="custom-icon-map-marker"><span class="sr-only">&nbsp;</span></span>
+                                    <span class="text title">Lugar:</span>
                                 </div>
                                 <div class="col">
-                                    <p>Roxine Web Design</p>
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col">
-                                    <span class="waituk-icon-user"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Created By:</span>
-                                </div>
-                                <div class="col">
-                                    <p>Sanjeev Jha</p>
+                                    <p>{{$event->place}}</p>
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col">
-                                    <span class="waituk-icon-calendar"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Completed on:</span>
+                                    <span class="custom-icon-user"><span class="sr-only">&nbsp;</span></span>
+                                    <span class="text title">Vistas:</span>
                                 </div>
                                 <div class="col">
-                                    <p>07th August 2017</p>
-                                </div>
-                            </li>
-                            <li class="row">
-                                <div class="col">
-                                    <span class="waituk-icon-skill"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Skills Used:</span>
-                                </div>
-                                <div class="col">
-                                    <p>PHP / MySQL / HTML5</p>
+                                    <p>{{$event->views}}</p>
                                 </div>
                             </li>
                             <li class="row">
                                 <div class="col">
-                                    <span class="waituk-icon-link2"><span class="sr-only">&nbsp;</span></span>
-                                    <span class="text title">Client Name:</span>
+                                    <span class="custom-icon-link2"><span class="sr-only">&nbsp;</span></span>
+                                    <span class="text title">Categoría:</span>
                                 </div>
                                 <div class="col">
-                                    <p><a href="#">Roxine Web Studio</a></p>
+                                    <p><a href="{{route('events.category', $event->category)}}">{{$event->category->name}}</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -131,19 +95,34 @@
                                     <div class="blog-img">
                                         <div class="image-wrap">
                                             <figure class="">
-                                                <img src="/img/img-37.jpg" alt="images description">
+                                                @if ($event->image)
+                                                    <img src="{{Storage::url($event->image->url)}}" alt="images description">
+                                                @else
+                                                    <img src="/img/img-37.jpg" alt="images description">
+                                                @endif
                                             </figure>
                                         </div>
+                                    </div>
+                                    <div class="tag-block mt-3 mb-2">
+                                        <ul>
+                                            @if ($event->tags->count())
+                                                @foreach ($event->tags as $tag)
+                                                    <li>
+                                                        <a href="{{route('events.tag', $tag)}}">{{ $tag->name }}</a>
+                                                    </li>
+                                                @endforeach
+                                            @endif
+                                        </ul>
                                     </div>
                                     {{ $event->body }}
                                     <div class="blog-share mt-5">
                                         <ul class="social-network with-text">
-                                            <li><strong>Share :</strong></li>
-                                            <li><a href="#"><span class="waituk-icon-facebook"></span>
+                                            <li><strong>Compartir :</strong></li>
+                                            <li><a href="#"><span class="custom-icon-facebook"></span>
                                                     Facebook</a></li>
-                                            <li><a href="#"><span class="waituk-icon-twitter"></span> Twitter</a>
+                                            <li><a href="#"><span class="custom-icon-twitter"></span> Twitter</a>
                                             </li>
-                                            <li><a href="#"><span class="waituk-icon-google-plus"></span>
+                                            <li><a href="#"><span class="custom-icon-google-plus"></span>
                                                     Google</a></li>
                                         </ul>
                                     </div>
@@ -181,7 +160,7 @@
                         </div>
                         <div class="contact-container">
                             <form method="POST" action="{{ route('events.createSuggestion') }}"
-                                class="comment-form waituk_contact-form">
+                                class="comment-form custom_contact-form">
                                 @csrf
                                 <fieldset>
                                     <div class="contact-title">
@@ -189,7 +168,8 @@
                                     </div>
                                     @auth
                                         <div class="row">
-                                            <input hidden placeholder="Full Name" id="event_id" type="text" name="event_id" value="{{$event->id}}" class="form-control">
+                                            <input hidden placeholder="Full Name" id="event_id" type="text"
+                                                name="event_id" value="{{ $event->id }}" class="form-control">
                                             <div class="col-sm-12 form-group">
                                                 <textarea placeholder="Tu comentario" id="description" type="text" name="description" class="form-control"></textarea>
                                             </div>
