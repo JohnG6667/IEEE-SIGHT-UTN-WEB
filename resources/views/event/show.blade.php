@@ -180,32 +180,26 @@
                             </div>
                         </div>
                         <div class="contact-container">
-                            <form action="#" class="comment-form waituk_contact-form">
+                            <form method="POST" action="{{ route('events.createSuggestion') }}"
+                                class="comment-form waituk_contact-form">
+                                @csrf
                                 <fieldset>
                                     <div class="contact-title">
                                         <h6>DÉJANOS TUS COMENTARIOS Y SUGERENCIAS</h6>
                                     </div>
                                     @auth
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <input placeholder="Full Name" type="text" class="form-control">
+                                        <div class="row">
+                                            <input hidden placeholder="Full Name" id="event_id" type="text" name="event_id" value="{{$event->id}}" class="form-control">
+                                            <div class="col-sm-12 form-group">
+                                                <textarea placeholder="Tu comentario" id="description" type="text" name="description" class="form-control"></textarea>
+                                            </div>
+                                            <div class="col-sm-12 btn-holder">
+                                                <button type="submit" class="btn btn-black btn-full">ENVIAR
+                                                    COMENTARIO</button>
+                                            </div>
                                         </div>
-                                        <div class="col-sm-6 form-group">
-                                            <input placeholder="Email Address" type="email" class="form-control">
-                                        </div>
-                                        <div class="col-sm-12 form-group">
-                                            <input placeholder="Website" type="text" class="form-control">
-                                        </div>
-                                        <div class="col-sm-12 form-group">
-                                            <textarea placeholder="Your Comment" class="form-control"></textarea>
-                                        </div>
-                                        <div class="col-sm-12 btn-holder">
-                                            <button type="submit"  class="btn btn-black btn-full">POST
-                                                COMMENT</button>
-                                        </div>
-                                    </div>
                                     @else
-                                    <p>Inicia sesión o regístrate para poder comentar.</p>
+                                        <p>Inicia sesión o regístrate para poder comentar.</p>
                                     @endauth
 
                                 </fieldset>

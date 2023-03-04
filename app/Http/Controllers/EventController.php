@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Event;
+use App\Models\Suggestion;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -51,5 +52,21 @@ class EventController extends Controller
         $tag->increment('views');
 
         return view('event.tag', compact('events', 'tag'));
+    }
+
+    public function createSuggestion(Request $request)
+    {
+        $validated = $request->validate([
+            'description' => 'required|max:500',
+        ]);
+
+        Suggestion::create([
+            'description' => $request['description'],
+            'event_id' => $request['event_id'],
+        ]);
+
+        $event = Event::find($request['event_id']);
+
+        return redirect()->route('events.show', $event);
     }
 }

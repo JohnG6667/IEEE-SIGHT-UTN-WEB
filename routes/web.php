@@ -35,4 +35,6 @@ Route::get('events/category/{category}', [EventController::class, 'category'])->
 
 Route::get('events/tag/{tag}', [EventController::class, 'tag'])->name('events.tag');
 
+Route::post('createSuggestion', [EventController::class, 'createSuggestion'])->name('events.createSuggestion');
+
 
