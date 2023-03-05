@@ -54,7 +54,7 @@
                                                 <li><a href="{{route('events.tag', $tag)}}"> {{ $tag->name }}
                                                     </a></li>
                                             @endforeach
-                                            <li><a href="portfolio-no-sidebar-2-col.html"> Ver todas... </a></li>
+                                            <li><a href="{{route('events.tags')}}"> Ver todas... </a></li>
                                         @else
                                             <li>Sin Tags</li>
                                         @endif

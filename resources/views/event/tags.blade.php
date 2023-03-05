@@ -5,12 +5,12 @@
             <div class="centered">
                 <div class="container">
                     <div class="visual-text visual-center">
-                        <h1 class="visual-title visual-sub-title">Categorías de Eventos</h1>
+                        <h1 class="visual-title visual-sub-title">Tags de Eventos</h1>
                         <div class="breadcrumb-block">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ route('index.index') }}"> Inicio </a></li>
                                 <li class="breadcrumb-item"><a href="{{ route('events.index') }}"> Eventos </a></li>
-                                <li class="breadcrumb-item active"> Categorías </li>
+                                <li class="breadcrumb-item active"> Tags </li>
                             </ol>
                         </div>
                     </div>
@@ -32,13 +32,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if ($categories->count())
-                        @foreach ($categories as $category)
+                    @if ($tags->count())
+                        @foreach ($tags as $tag)
                             <tr>
-                                <th scope="row">{{$category->id}}</th>
-                                <td><a style="text-transform: uppercase" href="{{route('events.category', $category)}}">{{$category->name}}</a></td>
-                                <td>{{$category->views}}</td>
-                                <td>{{$category->events()->count()}}</td>
+                                <th scope="row">{{$tag->id}}</th>
+                                <td><a style="text-transform: uppercase" href="{{route('events.tag', $tag)}}">{{$tag->name}}</a></td>
+                                <td>{{$tag->views}}</td>
+                                <td>{{$tag->events()->count()}}</td>
                             </tr>
                         @endforeach
                     @endif
@@ -47,7 +47,7 @@
         </div>
         <div class="btn-container full-width-btn top-space pagination justify-content-center">
 
-            {{ $categories->links() }}
+            {{ $tags->links() }}
 
         </div>
     </div>

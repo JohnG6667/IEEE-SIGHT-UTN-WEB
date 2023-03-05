@@ -84,4 +84,13 @@ class EventController extends Controller
 
         return view('event.categories', compact('categories'));
     }
+
+    public function tags()
+    {
+        $tags = Tag::whereHas('events')
+            ->latest('id')
+            ->paginate(6);
+
+        return view('event.tags', compact('tags'));
+    }
 }
