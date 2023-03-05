@@ -39,7 +39,7 @@
                                                 <li><a href="{{route('events.category', $category)}}"> {{ $category->name }}
                                                     </a></li>
                                             @endforeach
-                                            <li><a href="portfolio-no-sidebar-2-col.html"> Ver todas... </a></li>
+                                            <li><a href="{{route('events.categories')}}"> Ver todas... </a></li>
                                         @else
                                             <li>Sin Categorías</li>
                                         @endif

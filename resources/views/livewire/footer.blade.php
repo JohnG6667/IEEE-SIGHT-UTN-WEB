@@ -74,7 +74,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 pb-3">
-                        <p>CIEEE - Universidad Técnica del Norte Student Branch© - 2023</p>
+                        <p>CIEEE - Universidad Técnica del Norte Student Branch© - {{date("Y")}}</p>
                     </div>
                     <div class="col-md-6">
                         <ul class="social-network with-text">

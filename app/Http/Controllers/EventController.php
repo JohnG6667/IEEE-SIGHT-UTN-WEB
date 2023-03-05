@@ -75,4 +75,13 @@ class EventController extends Controller
 
         return redirect()->route('events.show', $event);
     }
+
+    public function categories()
+    {
+        $categories = Category::whereHas('events')
+            ->latest('id')
+            ->paginate(6);
+
+        return view('event.categories', compact('categories'));
+    }
 }
