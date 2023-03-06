@@ -53,7 +53,7 @@ class CategoryController extends Controller
         return redirect()->route('admin.categories.edit', $category)->with('info', '!La categoría se actualizó con éxito¡');
     }
 
-    public function destroy(Request $request, Category $category)
+    public function destroy(Category $category)
     {
         $category->delete();
 

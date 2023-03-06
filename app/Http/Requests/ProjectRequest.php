@@ -4,10 +4,8 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EventRequest extends FormRequest
+class ProjectRequest extends FormRequest
 {
-
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -21,21 +19,21 @@ class EventRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function rules()
     {
-        $event = $this->route()->parameter('event');
+        $project = $this->route()->parameter('project');
 
         $rules = [
-            'title' => 'required',
-            'slug' => 'required|unique:events',
+            'name' => 'required',
+            'slug' => 'required|unique:projects',
             'status' => 'required|in:1,2',
             'file' => 'image'
         ];
 
-        if ($event) {
-            $rules['slug'] = 'required|unique:events,slug,' . $event->id;
+        if ($project) {
+            $rules['slug'] = 'required|unique:projects,slug,' . $project->id;
         }
 
         if ($this->status == 2) {
@@ -44,9 +42,7 @@ class EventRequest extends FormRequest
                 'tags' => 'required',
                 'extract' => 'required',
                 'body' => 'required',
-                'entity' => 'required',
-                'place' => 'required',
-                'event_date' => 'required'
+                'goal' => 'required'
             ]);
         }
 

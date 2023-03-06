@@ -26,20 +26,11 @@
 @endsection
 
 @section('content_header')
-    <a class="btn btn-secondary btn-sm float-right" href="{{ route('admin.events.create') }}">Agregar Evento</a>
+    <a class="btn btn-secondary btn-sm float-right" href="{{ route('admin.members.create') }}">Nuevo Miembro</a>
 
-    <h1>Lista de Categorías</h1>
+    <h1>Membresías</h1>
 @stop
 
 @section('content')
-    @livewire('admin.events-index')
-@stop
-
-
-@section('js')
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet"></script>
-
-
-
+    @livewire('admin.members-index')
 @stop

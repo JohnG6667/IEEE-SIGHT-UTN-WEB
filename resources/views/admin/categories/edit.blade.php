@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Felix-Place')
+@section('title', 'IEEE-SIGHT')
 
 @section('content_header')
     <h1>Editar Categoría</h1>

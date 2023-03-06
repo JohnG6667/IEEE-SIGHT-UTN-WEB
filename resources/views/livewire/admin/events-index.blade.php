@@ -1,7 +1,7 @@
 <div class="card">
 
     <div class="card-header">
-        <input wire:model="search" class="form-control" placeholder="Ingrese el título de un evento.">
+        <input wire:model="search" class="form-control" placeholder="Ingrese el nombre de un post.">
     </div>
 
     @if ($events->count())
@@ -10,9 +10,10 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Título</th>
+                        <th>Nombre</th>
+                        <th>Vistas</th>
                         <th>Publicado</th>
-                        <th colspan="2"></th>
+                        <th colspan="3"></th>
                     </tr>
                 </thead>
 
@@ -21,7 +22,15 @@
                         <tr>
                             <td>{{ $event->id }}</td>
                             <td>{{ $event->title }}</td>
-                            <td>{{ $event->created_at }}</td>
+                            @if ($event->status == 2)
+                                <td style="color: green">
+                                    Si
+                                </td>
+                            @else
+                                <td style="color: red">
+                                    No
+                                </td>
+                            @endif
                             <td width='10px'>
                                 <a class="btn btn-primary btn-sm"
                                     href="{{ route('admin.events.edit', $event) }}">Editar</a>
@@ -50,3 +59,54 @@
         </div>
     @endif
 </div>
+<div id="calendar">
+</div>
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek'
+            },
+            today: 'today2',
+            locale: 'esLocale',
+            editable: true,
+            eventClick: function(info) {
+                alert('Slug: ' + info.event.id);
+                let eventSlug = info.event.id; // Aquí debes asignar el ID real de la categoría
+                let url = "{{ route('admin.events.edit', ['event' => ':slug']) }}";
+                url = url.replace(':slug', eventSlug);
+                window.location.href = url;
+            },
+            droppable: true,
+            eventDrop: function(info) {
+                alert("Evento de id: " + info.event.id + " " + info.event.title +
+                    " was dropped on " + info.event.start.toISOString());
+
+                if (!confirm("Are you sure about this change?")) {
+                    info.revert();
+                }
+            },
+            drop: function(info) {
+                alert('Ha dado click ')
+                console.log('Ha dado click!');
+            },
+            height: 650,
+            events: @json($eventsCalendar)
+        });
+        calendar.render();
+    });
+</script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
+
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>

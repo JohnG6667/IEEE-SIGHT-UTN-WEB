@@ -22,7 +22,6 @@ class EventController extends Controller
     {
         $categories = Category::pluck('name', 'id');
         $tags = Tag::all();
-        $iframes = null;
 
         return view('admin.events.create', compact('categories', 'tags'));
     }
@@ -49,11 +48,15 @@ class EventController extends Controller
     {
         $categories = Category::pluck('name', 'id');
         $tags = Tag::all();
-        return view('admin.events.edit', compact('event', 'categories', 'tags'));
+        return view('admin.events.edit', compact('event', 'tags', 'categories'))->with('info', 'El evento se registró con éxito');
     }
+
+
+
 
     public function update(EventRequest $request, Event $event)
     {
+
         $event->update($request->all());
 
         if ($request->file('file')) {
@@ -78,7 +81,7 @@ class EventController extends Controller
 
         Cache::flush();
 
-        return redirect()->route('admin.events.edit', $event)->with('info', 'El evento ha sido actualizado con éxito');
+        return redirect()->route('admin.events.edit', $event)->with('info', 'El evento se actualizó con éxito');
     }
 
     public function destroy(Request $request, Event $event)
